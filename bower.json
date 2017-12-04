@@ -1,0 +1,21 @@
+{
+  "name": "project",
+  "description": "",
+  "main": "frontend/index.html",
+  "authors": [
+    "George Pagonoudis <giorgospago23@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.6.7"
+  }
+}
