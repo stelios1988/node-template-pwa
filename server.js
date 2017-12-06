@@ -1,6 +1,7 @@
 // Libraries
 const express       = require('express');
 const cors          = require('cors');
+const bodyParser    = require('body-parser');
 const socketio      = require('socket.io');
 require('dotenv').config();
 
@@ -8,7 +9,7 @@ require('dotenv').config();
 require('./backend/config/database');
 require('./backend/config/mail');
 
-// Load Controllers
+// Load Models, Controllers, Middlewares
 require('./backend/models/loadModels');
 require('./backend/controllers/loadControllers');
 require('./backend/middlewares/loadMiddlewares');
@@ -22,8 +23,10 @@ const app = express();
 // Initialize Sockets && app listen
 global.io = socketio(app.listen(process.env.PORT || 3000));
 
+// Middlewares
 app.use(cors());
 app.use(express.static('frontend'));
+app.use(bodyParser.json());
 
 // Backend Routes
 app.use('/api', mainRoutes);

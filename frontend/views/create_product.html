@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Create Product</h1>
+            <form>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" ng-model="product.title" class="form-control" id="title" placeholder="Title here..">
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" ng-model="product.price" class="form-control" id="price" placeholder="Price here..">
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" ng-model="product.description" class="form-control" id="description" placeholder="Description here..">
+                </div>
+            
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="product.on_sale"> On sale
+                    </label>
+                </div>
+            
+                <button type="submit" ng-click="saveProduct()" class="btn btn-default">Submit</button>
+            </form>
+            <pre>{{ product | json }}</pre>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+global.Product = require('./Product');

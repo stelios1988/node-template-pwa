@@ -7,10 +7,12 @@ router.get('/', function (req, res) {
 
 router.get('/users', UsersController.getUsers);
 router.get('/about', AboutController.getAbout);
-
+router.get('/products', ProductsController.list);
+router.post('/save-product', ProductsController.saveProduct);
 
 // Catch 404 from /api
 router.use(function(req, res){
+    res.status(404);
     res.send('404');
 });
 
