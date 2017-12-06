@@ -29,4 +29,10 @@ app.controller("ProductController", ["$scope","$http",function($scope,$http){
                 }
             );
     };
+
+    socket.on("new-product", function(data){
+        $scope.products.push(data);
+        
+        $scope.$apply(); // Refresh to scope tou angular
+    });
 }]);

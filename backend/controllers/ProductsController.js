@@ -14,6 +14,9 @@ controller.saveProduct = function(req, res){
         on_sale         : req.body.on_sale
     });
     my_product.save();
+
+    io.emit("new-product", my_product);
+
     res.json({status: 'ok'});
 };
 
