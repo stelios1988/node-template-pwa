@@ -1,0 +1,15 @@
+<button 
+    class="btn btn-primary"
+    ngf-select
+    ng-model="my_image"
+>
+    Select
+</button>
+
+<button class="btn btn-success" ng-click="sendImage()">
+    send image
+</button>
+
+<br>
+
+<img src="/uploads/{{ img }}" ng-if="img"/>

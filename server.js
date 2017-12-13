@@ -3,7 +3,22 @@ const express       = require('express');
 const cors          = require('cors');
 const bodyParser    = require('body-parser');
 const socketio      = require('socket.io');
+const multer        = require('multer');
+const path          = require('path');
 require('dotenv').config();
+
+// Config multer destination path
+//global.upload = multer({ dest: 'frontend/uploads/' });
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'frontend/uploads/');
+    },
+    filename: function (req, file, cb) {
+        let parts = path.parse(file.originalname);
+        cb(null, parts.name+'-'+Date.now()+parts.ext);
+    }
+});
+global.upload = multer({ storage: storage });
 
 // Include Config files
 require('./backend/config/database');

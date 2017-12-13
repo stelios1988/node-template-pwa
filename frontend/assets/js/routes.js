@@ -10,6 +10,10 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
         .when("/products", {
             templateUrl: "/views/products.html",
             controller: "ProductController"
+        })
+        .when("/image", {
+            templateUrl: "/views/image.html",
+            controller: "ImageController"
         });
 
     $locationProvider.html5Mode(true);

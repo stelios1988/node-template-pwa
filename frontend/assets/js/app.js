@@ -1,3 +1,3 @@
-var app = angular.module('project', ['ngRoute']);
+var app = angular.module('project', ['ngRoute','ngFileUpload']);
 
 var socket = io();
