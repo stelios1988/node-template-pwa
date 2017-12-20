@@ -11,6 +11,10 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
             templateUrl: "/views/products.html",
             controller: "ProductController"
         })
+        .when("/product/:productId", {
+            templateUrl: "/views/product.html",
+            controller: "OneProductController"
+        })
         .when("/image", {
             templateUrl: "/views/image.html",
             controller: "ImageController"

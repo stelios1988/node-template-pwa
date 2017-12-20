@@ -1,0 +1,9 @@
+<h1>{{ product.title }}</h1>
+<h1>{{ product.price | number:2 }}&euro;</h1>
+
+<h2>Comments</h2>
+<ul>
+    <li ng-repeat="comment in product.comments">{{ comment.text }}</li>
+</ul>
+<textarea ng-model="comment" cols="30" rows="10"></textarea>
+<button ng-click="saveComment()">save comment</button>
