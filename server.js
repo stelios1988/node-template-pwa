@@ -41,6 +41,7 @@ global.io = socketio(app.listen(process.env.PORT || 3000));
 // Middlewares
 app.use(cors());
 app.use(express.static('frontend'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Backend Routes

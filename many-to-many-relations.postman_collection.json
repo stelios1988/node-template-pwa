@@ -1,0 +1,172 @@
+{
+	"variables": [],
+	"info": {
+		"name": "many-to-many-relations",
+		"_postman_id": "dd604867-3bed-f749-9dd0-1aa041f41f0d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update Car Options",
+			"request": {
+				"url": "localhost:7000/api/car-options",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "car_id",
+							"value": "5a78a589f8c8e627f57c2136",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "options[5a78aca003639f2c3edde982][percent]",
+							"value": "90%",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "options[5a78ad16a83a2f2cf1a1032d][percent]",
+							"value": "10%",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "options[5a78aca003639f2c3edde982][driver]",
+							"value": "true",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "options[5a78ad16a83a2f2cf1a1032d][driver]",
+							"value": "false",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"url": "localhost:7000/api/customers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Softas",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cars[0]",
+							"value": "5a78a589f8c8e627f57c2136",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cars[1]",
+							"value": "5a78a5e8f8c8e627f57c2137",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customer List",
+			"request": {
+				"url": "localhost:7000/api/customers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Car",
+			"request": {
+				"url": "localhost:7000/api/cars",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "brand",
+							"value": "Citroen",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "C4",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Cars List",
+			"request": {
+				"url": "localhost:7000/api/cars",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "giorgospago",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "paok12!@",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
