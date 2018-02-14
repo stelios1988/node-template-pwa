@@ -1,0 +1,21 @@
+{
+    "name": "Node Template",
+    "short_name": "Node Template Short",
+    "icons": [
+        {
+            "src": "/assets/images/200.png",
+            "sizes": "200x200",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#ffffff",
+    "theme_color": "#ed143d"
+}
